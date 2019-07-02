@@ -1,0 +1,11 @@
+#divA {
+    margin-right: 10px;
+}
+
+#divB {
+    margin-right: 10px;
+}
+#divButton{
+    display: flex;
+    justify-content: center;
+}
