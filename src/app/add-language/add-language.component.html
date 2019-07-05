@@ -1,0 +1,45 @@
+<form #form="ngForm" id="formTodo">      
+    <div class="form-group"> 
+        <p>Id:</p>
+        <input type="text" 
+        [(ngModel)]="language.id" 
+        #id="ngModel" 
+        required
+        name="title"
+        class="form-control">
+    </div>
+    
+    <div class="form-group"> 
+        <p>Name:</p>
+        <input type="text" 
+        [(ngModel)]="language.name" 
+        #name="ngModel" 
+        required
+        name="title"
+        class="form-control">
+    </div>
+    
+    <div class="form-group"> 
+        <p>Creator:</p>
+        <input type="text" 
+        [(ngModel)]="language.creator" 
+        #creator="ngModel" 
+        required
+        name="id"
+        class="form-control">
+    </div>   
+    
+    <div class="form-group"> 
+        <p>Year:</p>
+        <input type="text" 
+        [(ngModel)]="language.year" 
+        #year="ngModel" 
+        required
+        name="date"
+        class="form-control">
+    </div>
+    
+    <div id="divButton">
+        <button [disabled]="form.invalid" (click)="enviar()" class="btn btn-primary">Enviar</button>
+    </div>
+</form>

@@ -11,6 +11,10 @@ export class LanguagesService {
   constructor(private httpClient: HttpClient) { }
 
   getLanguages(): Observable<ItemLanguage[]> {
-    return this.httpClient.get<ItemLanguage[]>('https://alefesouza.dev/gama/languages.php');
+    return this.httpClient.get<ItemLanguage[]>('http://localhost:3000/languages');
+  }
+
+  adicionarTodo(language: ItemLanguage){
+    return this.httpClient.post('http://localhost:3000/languages', language);
   }
 }

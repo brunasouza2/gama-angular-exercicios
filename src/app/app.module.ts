@@ -6,10 +6,14 @@ import { LanguagesComponent } from './languages/languages.component';
 import { ContadorComponent } from './contador/contador.component';
 import { Routes, RouterModule } from '@angular/router';
 import { LanguageItemComponent } from './language-item/language-item.component';
+import { AddLanguageComponent } from './add-language/add-language.component';
+import { FormsModule } from '@angular/forms';
+import { BoolPipe } from './bool.pipe';
 
 const routes: Routes = [
   {path: 'counter', component : ContadorComponent},
   {path: 'languages', component : LanguagesComponent},
+  {path: 'languages/add', component : AddLanguageComponent},
 ];
 
 @NgModule({
@@ -17,12 +21,15 @@ const routes: Routes = [
     AppComponent,
     LanguagesComponent,
     ContadorComponent,
-    LanguageItemComponent,    
+    LanguageItemComponent,
+    AddLanguageComponent,
+    BoolPipe,    
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
