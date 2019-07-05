@@ -1,0 +1,6 @@
+<br/><br/>
+<ul>
+    <li *ngFor="let item of languages$ | async">
+        <app-language-item [data]="item"></app-language-item>
+    </li>
+</ul>

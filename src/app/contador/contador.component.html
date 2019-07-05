@@ -1,0 +1,30 @@
+<div style="text-align:center">
+    <h2>
+      {{ title }}
+    </h2>
+  
+    <div id="divContador">
+      <p>Contador</p>
+      <p>{{ contador }}</p>
+    </div>
+  
+    <div id="divButton">
+        <div id="divA">
+            <button (click)="incrementar()" class="btn btn-primary">Incrementa</button>
+          </div>
+        
+          <div id="divB">
+            <button (click)="decrementar()" class="btn btn-secondary">Decrementa</button>
+          </div>
+    </div> 
+  
+    <div *ngIf="contador > 5; else menor" [ngStyle]="{ color: contador < 10 ? 'red' : 'green'}">
+      <p>Contador é maior que 5</p>
+    </div>
+  
+  <ng-template #menor>
+    <div [ngStyle]="{ color: 'red'}">
+      <p>Contador é menor que 5</p>
+    </div>
+  </ng-template>
+  </div>
